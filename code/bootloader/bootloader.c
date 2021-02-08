@@ -1,4 +1,4 @@
-/* 
+/*
  * Bootloader for CS107E
  * Author: Julie Zelenski, updated Mar 2020
  * Based on original bootloader03 by dwelch + Dawson rewrites
@@ -8,7 +8,7 @@
 #include "timer.h"
 #include "uart.h"
 
-enum { 
+enum {
     SOH = 0x01,     // Start of heading
     ACK = 0x06,     // Acknowledge (positive)
     NAK = 0x15,     // Acknowledge (negative)
@@ -32,7 +32,7 @@ static int receive_byte(void)
     unsigned t0 = timer_get_ticks();
 
     while (1) {
-        if (uart_haschar()) 
+        if (uart_haschar())
             return uart_recv();
         if ((timer_get_ticks() - t0) >= 1000000) // one sec
             return TIMEOUT;
@@ -54,7 +54,7 @@ static bool receive_packet(unsigned char *dst, int expected_seq)
     return ((seq == expected_seq) && (seq_inv == (0xFF - seq)) && (last == cksum));
 }
 
-static void receive_loop(void) 
+static void receive_loop(void)
 {
     unsigned char seqnum = 1;
     unsigned char *addr = ARMBASE;
@@ -73,7 +73,7 @@ static void receive_loop(void)
                 uart_send(ACK);
                 addr += PAYLOAD_SIZE;
                 seqnum++;
-           } else {
+            } else {
                 uart_send(NAK);
             }
         } else if (b == EOT) {
@@ -85,8 +85,8 @@ static void receive_loop(void)
     }
 }
 
-void bootloader_main(void) 
+void bootloader_main(void)
 {
     uart_init();
     receive_loop();
-}   
+}

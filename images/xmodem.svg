@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="210 146 312 497" width="26pc" height="497pt" xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <metadata> Produced by OmniGraffle 7.5 
+  <metadata> Produced by OmniGraffle 7.5
     <dc:date>2018-01-23 05:26:41 +0000</dc:date>
   </metadata>
   <defs>
@@ -55,11 +55,11 @@
       <line x1="261.5" y1="199" x2="261.5" y2="580.42975" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
       <line x1="455.5" y1="200" x2="455.5" y2="580.42975" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
       <text transform="translate(240 151.052)" fill="black">
-        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="5.152" y="15" textLength="85.696">TRANSMIT</tspan>
-        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x=".184" y="33.448" textLength="90.632">(rpi-install)</tspan>
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x=".152" y="15" textLength="90.696">TRANSMIT</tspan>
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x=".184" y="33.448" textLength="75.632">(rpi-run)</tspan>
       </text>
       <text transform="translate(375 151.052)" fill="black">
-        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="22.64" y="15" textLength="72.72">RECEIVE</tspan>
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="22.64" y="15" textLength="75.72">RECEIVE</tspan>
         <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="5.248" y="33.448" textLength="100.504">(bootloader)</tspan>
       </text>
       <line x1="455.5" y1="232.53942" x2="271.4" y2="232.32936" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>

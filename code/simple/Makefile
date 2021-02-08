@@ -2,7 +2,7 @@ NAME = simple
 
 CFLAGS = -I$(CS107E)/include -g -Wall -Og -std=c99 -ffreestanding -mapcs-frame -fno-omit-frame-pointer
 LDFLAGS = -nostdlib -T memmap -L$(CS107E)/lib
-LDLIBS = 
+LDLIBS =
 
 all : $(NAME).bin
 
@@ -21,13 +21,13 @@ all : $(NAME).bin
 %.list: %.o
 	arm-none-eabi-objdump --no-show-raw-insn -d $< > $@
 
-install: $(NAME).bin
-	rpi-install.py $<
+run: $(NAME).bin
+	rpi-run.py $<
 
 clean:
 	rm -f *.o *.bin *.elf *.list *~
 
-.PHONY: all clean install
+.PHONY: all clean run
 .PRECIOUS: %.elf %.o
 
 # empty recipe used to disable built-in rules for native build
